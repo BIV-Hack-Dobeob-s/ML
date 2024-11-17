@@ -22,7 +22,7 @@ import joblib
 
 # Загрузка датасета
 
-df_main = pd.read_csv("input_dataframe/payments_main.tsv", sep='\t', names=["id", "date", "amount", "text"])
+df_main = pd.read_csv("input/payments.tsv", sep='\t', names=["id", "date", "amount", "text"])
 df_main = df_main.drop(columns=["date"])
 
 
@@ -269,4 +269,4 @@ output_df = preprocessed_df_main[['id', 'preprocessed_text', 'predicted_label']]
 
 output_df = output_df[['id', 'predicted_label']]
 
-output_df.to_csv('output_dataframe/output.tsv', sep='\t', index=False, header=False)
+output_df.to_csv('output/output.tsv', sep='\t', index=False, header=False)

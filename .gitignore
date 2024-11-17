@@ -1,0 +1,3 @@
+# input and output files
+*.tsv
+!*.example.tsv
